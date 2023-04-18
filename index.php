@@ -66,7 +66,8 @@
             echo    "<table class='table'>
                         <thead>
                             <tr>
-                                <th scope='row'>Nome</th>
+                                <th scope='row'>".$key1 + 1 ."</th>
+                                <th scope='col'>Nome</th>
                                 <th scope='col'>Descrizione</th>
                                 <th scope='col'>Parcheggio</th>
                                 <th scope='col'>Voto</th>
@@ -74,7 +75,8 @@
                             </tr>
                         </thead>
                         <tbody >
-                            <tr>";
+                            <tr>
+                            <td> </td>";
                             foreach($hotel as $key => $hotelInfo){
                             echo    "<td>" .$hotelInfo."</td>";
                             }
