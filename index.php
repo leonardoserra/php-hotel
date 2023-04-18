@@ -8,26 +8,30 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     </head>
     <body>
-        <header>
 
+        <header>
         <h1 class="text-center">Hotel Search</h1>
-        <form >
-            <div class="d-flex justify-content-between flex-wrap">
-            <label for="vote" class="form-label">Cerca per Voto</label>
-            <input type="number" id="vote" class="form-control" name="vote" placeholder="Filtra per numero stelle" min="1" max="5"/>
-            <select class="form-select" name="parking">
-                <option selected value="all">-tutti-</option>
-                <option value="true">Con Parcheggio</option>
-                <option value="false">Senza Parcheggio</option>
-            </select>
+        <form action="index.php" method="GET">
+            <div class="d-flex justify-content-between flex-wrap my-2">
+                <label for="vote" class="form-label">Cerca per Voto</label>
+                <input type="number" id="vote" class="form-control my-2" name="vote" placeholder="Filtra per numero stelle" min="1" max="5"/>
+                <select class="form-select my-2" name="parking">
+                    <option selected value="all">-tutti-</option>
+                    <option value="true">Con Parcheggio</option>
+                    <option value="false">Senza Parcheggio</option>
+                </select>
             </div>
-            <button class="btn btn-primary" type="submit">Filtra</button>
-            <button class="btn btn-warning" type="reset">Reimposta</button>
+            <button class="btn btn-primary my-2" type="submit">Filtra</button>
+            <button class="btn btn-warning my-2" type="reset">Reimposta</button>
         </form>
         </header>
 
         <!-- blocco php -->
         <?php
+
+            $vote = $_GET['vote'];
+            $parking = 'all';
+            
 
             $hotels = [
 
@@ -71,18 +75,17 @@
 
             //inizio codice
             
-            echo "<h1>Hotel Search</h1>";
 
             //ciclo l'array
-            foreach($hotels as $key1 => $hotel){
                 //ciclo ogni elemento di ogni hotel
                 //             <tr>";
                 //             foreach($hotel as $key => $hotelInfo){
                 //                 echo    "<th>" .$key."</th>";
                 //                 }
                 //             "</tr>
-
-            echo    "<table class='table table-striped'>
+                
+            foreach($hotels as $key1 => $hotel){
+                echo"<table class='table table-striped'>
                         <thead >
                             <tr >
                                 <th class='col-1'>".$key1 + 1 ."</th>
@@ -96,13 +99,15 @@
                         <tbody >
                             <tr>
                             <th class='col-1'> </td>";
-                            foreach($hotel as $key => $hotelInfo){
-                            echo    "<td class='col-2'>" .$hotelInfo."</td>";
+                            if($parking == 'all'){
+                                foreach($hotel as $key => $hotelInfo){
+                                    echo "<td class='col-2'>" .$hotelInfo."</td>";
+                                }
                             }
-            echo            "</tr>
+                echo        "</tr>
                         </tbody>
                     </table>";
-                        }
+            }
 
 
             
