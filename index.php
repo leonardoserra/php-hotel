@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hotel Research</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     </head>
     <body>
         <?php
@@ -48,22 +49,35 @@
                 ],
 
             ];
-            echo "<pre>";
 
+            //inizio codice
+            
             echo "<h1>Hotel Search</h1>";
 
-            
+            //ciclo l'array
+            foreach($hotels as $index => $hotel){
+                //ciclo ogni elemento di ogni hotel
 
-            foreach($hotels as $hotel){
-                foreach($hotel as $key => $hotelInfo){
-                    echo "<pre>";
-                    echo $key . ": " .$hotelInfo;
-                    echo "</pre>";
-
+                    echo "<table class='table'>
+                            <thead>
+                            <tr>
+                                <th scope='col'>#</th>
+                                <th scope='col'>". $hotels[$index]['name'] ."</th>
+                            </tr>
+                            </thead>
+                        </table>";
+                
+                        foreach($hotel as $key => $hotelInfo){
+                        
+                        echo "<table > 
+                                <thead>
+                                    <tr>
+                                        <th>" . $key . "</th>
+                                    </tr>
+                            </table>";
                 }
             }
-
-            echo "</pre>";
+            
 
             echo "<hr/>";
             echo "<div>debug</div>";
