@@ -54,9 +54,12 @@
 
             
 
-            foreach($hotels as $index => $hotel){
-                foreach($hotel as $hotelInfo){
-                    echo $hotelInfo . "<br>";
+            foreach($hotels as $hotel){
+                foreach($hotel as $key => $hotelInfo){
+                    echo "<pre>";
+                    echo $key . ": " .$hotelInfo;
+                    echo "</pre>";
+
                 }
             }
 
