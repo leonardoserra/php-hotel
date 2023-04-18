@@ -17,8 +17,8 @@
                 <input type="number" id="vote" class="form-control my-2" name="vote" placeholder="Filtra per numero stelle" min="1" max="5"/>
                 <select class="form-select my-2" name="parking">
                     <option selected value="all">-tutti-</option>
-                    <option value="true">Con Parcheggio</option>
-                    <option value="false">Senza Parcheggio</option>
+                    <option value="yes">Con Parcheggio</option>
+                    <option value="no">Senza Parcheggio</option>
                 </select>
             </div>
             <button class="btn btn-primary my-2" type="submit">Filtra</button>
@@ -96,21 +96,22 @@
                             </tr>
                         </thead>
                         <tbody >
+                        
                             <tr>";
                             foreach($hotel as $key => $hotelInfo){
-                                if($parking == 'all'){
+                                if($parking === 'all' || $parking == null){
                                     // echo 'all';
                                     echo "<td class='col-2'>" .$hotelInfo."</td>";
-                                }elseif($parking == true){
+                                }elseif($parking == 'yes'){
                                     // echo 'true';
 
-                                    if($hotel['parking'] == true){
+                                    if($hotel['parking'] === true){
                                         echo "<td class='col-2'>" .$hotelInfo."</td>";
                                     }
-                                }elseif($parking == false){
+                                }elseif($parking === 'no'){
                                     // echo 'false';
 
-                                    if($hotel['parking'] == false){
+                                    if($hotel['parking'] === false){
                                         echo "<td class='col-2'>" .$hotelInfo."</td>";
                                     }
                                 }
