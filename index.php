@@ -74,7 +74,32 @@
             ];
 
             //inizio codice
-            
+            echo "<table class='table table-striped'>
+                        <thead >
+                            <tr >
+                                <th class='col-2'>Nome</th>
+                                <th class='col-2'>Descrizione</th>
+                                <th class='col-2'>Parcheggio</th>
+                                <th class='col-2'>Voto</th>
+                                <th class='col-2'>Distanza dal centro</th>
+                            </tr>
+                        </thead>
+                        <tbody>";
+                        foreach($hotels as $key1 => $hotel){ 
+                            // foreach($hotel as $key => $hotelInfo){
+
+                            echo "<tr>
+                                    <td class='col-2'>".$hotel['name']."</td>
+                                    <td class='col-2'>".$hotel['description']."</td>
+                                    <td class='col-2'>".$hotel['parking']."</td>
+                                    <td class='col-2'>".$hotel['vote']."</td>
+                                    <td class='col-2'>".$hotel['distance_to_center']."</td>
+                                </tr>";
+                            // }
+                        }
+                        "</tbody>
+                    </table>";
+                            
 
             //ciclo l'array
                 //ciclo ogni elemento di ogni hotel
@@ -83,7 +108,17 @@
                 //                 echo    "<th>" .$key."</th>";
                 //                 }
                 //             "</tr>
-                
+                echo"<table class='table table-striped'>
+                        <thead >
+                            <tr >
+                                <th class='col-2'>Nome</th>
+                                <th class='col-2'>Descrizione</th>
+                                <th class='col-2'>Parcheggio</th>
+                                <th class='col-2'>Voto</th>
+                                <th class='col-2'>Distanza dal centro</th>
+                            </tr>
+                        </thead>
+                        <tbody>";
             foreach($hotels as $key1 => $hotel){
                 echo"<table class='table table-striped'>
                         <thead >
@@ -95,16 +130,16 @@
                                 <th class='col-2'>Distanza dal centro</th>
                             </tr>
                         </thead>
-                        <tbody >
+                        <tbody>
                         
                             <tr>";
                             foreach($hotel as $key => $hotelInfo){
+
                                 if($parking === 'all' || $parking == null){
                                     // echo 'all';
                                     echo "<td class='col-2'>" .$hotelInfo."</td>";
                                 }elseif($parking == 'yes'){
                                     // echo 'true';
-
                                     if($hotel['parking'] === true){
                                         echo "<td class='col-2'>" .$hotelInfo."</td>";
                                     }
@@ -115,8 +150,9 @@
                                         echo "<td class='col-2'>" .$hotelInfo."</td>";
                                     }
                                 }
-                        }
 
+                                
+                            }
                 echo        "</tr>
                         </tbody>
                     </table>";
