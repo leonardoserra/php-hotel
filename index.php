@@ -63,22 +63,22 @@
                 //                 }
                 //             "</tr>
 
-            echo    "<table class='table'>
-                        <thead>
-                            <tr>
-                                <th scope='row'>".$key1 + 1 ."</th>
-                                <th scope='col'>Nome</th>
-                                <th scope='col'>Descrizione</th>
-                                <th scope='col'>Parcheggio</th>
-                                <th scope='col'>Voto</th>
-                                <th scope='col'>Distanza dal centro</th>
+            echo    "<table class='table table-striped'>
+                        <thead >
+                            <tr >
+                                <th class='col-1'>".$key1 + 1 ."</th>
+                                <th class='col-2'>Nome</th>
+                                <th class='col-2'>Descrizione</th>
+                                <th class='col-2'>Parcheggio</th>
+                                <th class='col-2'>Voto</th>
+                                <th class='col-2'>Distanza dal centro</th>
                             </tr>
                         </thead>
                         <tbody >
                             <tr>
-                            <td> </td>";
+                            <th class='offset-1'> </td>";
                             foreach($hotel as $key => $hotelInfo){
-                            echo    "<td>" .$hotelInfo."</td>";
+                            echo    "<td class='col-2'>" .$hotelInfo."</td>";
                             }
             echo            "</tr>
                         </tbody>
