@@ -30,7 +30,7 @@
         <?php
 
             $vote = $_GET['vote'];
-            $parking = 'all';
+            $parking = $_GET['parking'];
             
 
             $hotels = [
@@ -88,7 +88,6 @@
                 echo"<table class='table table-striped'>
                         <thead >
                             <tr >
-                                <th class='col-1'>".$key1 + 1 ."</th>
                                 <th class='col-2'>Nome</th>
                                 <th class='col-2'>Descrizione</th>
                                 <th class='col-2'>Parcheggio</th>
@@ -97,13 +96,26 @@
                             </tr>
                         </thead>
                         <tbody >
-                            <tr>
-                            <th class='col-1'> </td>";
-                            if($parking == 'all'){
-                                foreach($hotel as $key => $hotelInfo){
+                            <tr>";
+                            foreach($hotel as $key => $hotelInfo){
+                                if($parking == 'all'){
+                                    // echo 'all';
                                     echo "<td class='col-2'>" .$hotelInfo."</td>";
+                                }elseif($parking == true){
+                                    // echo 'true';
+
+                                    if($hotel['parking'] == true){
+                                        echo "<td class='col-2'>" .$hotelInfo."</td>";
+                                    }
+                                }elseif($parking == false){
+                                    // echo 'false';
+
+                                    if($hotel['parking'] == false){
+                                        echo "<td class='col-2'>" .$hotelInfo."</td>";
+                                    }
                                 }
-                            }
+                        }
+
                 echo        "</tr>
                         </tbody>
                     </table>";
