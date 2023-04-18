@@ -8,6 +8,19 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     </head>
     <body>
+
+    <header>
+
+        <h1 class="text-center">Hotel Search</h1>
+        <div class="d-flex justify-content-between">
+            <input type="number" class="form-control" name="vote" placeholder="Filtra per numero stelle" min="1" max="5"/>
+            <select class="form-select" name="parking">
+                <option selected value="all">-tutti-</option>
+                <option value="true">Con Parcheggio</option>
+                <option value="false">Senza Parcheggio</option>
+            </select>
+        </div>
+    </header>    
         <?php
 
             $hotels = [
@@ -52,7 +65,7 @@
 
             //inizio codice
             
-            echo "<h1>Hotel Search</h1>";
+            
 
             //ciclo l'array
             foreach($hotels as $key1 => $hotel){
@@ -84,12 +97,6 @@
                         </tbody>
                     </table>";
                         }
-
-
-            
-            
-            
-            
             //debug
             echo "<hr/>";
             echo "<div>debug</div>";
