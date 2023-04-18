@@ -58,23 +58,31 @@
             foreach($hotels as $index => $hotel){
                 //ciclo ogni elemento di ogni hotel
 
-                    echo "<table class='table'>
-                            <thead>
-                            <tr>
-                                <th scope='col'>#</th>
-                                <th scope='col'>". $hotels[$index]['name'] ."</th>
-                            </tr>
-                            </thead>
-                        </table>";
+            echo    "<table class='table'>
+                        <thead>
+                        <tr>
+                            <th scope='col'>". $hotel['name'] ."</th>
+                        </tr>
+                        </thead>
+                        <tbody class='table-group-divider'>";
+
+                            foreach($hotel as $key => $hotelInfo){
+                            echo    "<tr>
+                                        <td scope='row'>" .$hotelInfo."</td>
+                                    </tr>";
+                            }
+                        
+            echo        "</tbody>
+                    </table>";
                 
                         foreach($hotel as $key => $hotelInfo){
                         
-                        echo "<table > 
-                                <thead>
-                                    <tr>
-                                        <th>" . $key . "</th>
-                                    </tr>
-                            </table>";
+                //         echo "<table > 
+                //                 <thead>
+                //                     <tr>
+                //                         <th>" . $key . "</th>
+                //                     </tr>
+                //             </table>";
                 }
             }
             
