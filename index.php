@@ -87,7 +87,9 @@
                         <tbody>";
                         foreach($hotels as $key1 => $hotel){ 
                             // foreach($hotel as $key => $hotelInfo){
-
+                                if($parking === 'all' || $parking == null){
+                                    // echo 'all';
+                                }
                             echo "<tr>
                                     <td class='col-2'>".$hotel['name']."</td>
                                     <td class='col-2'>".$hotel['description']."</td>
