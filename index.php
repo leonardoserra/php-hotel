@@ -55,38 +55,37 @@
             echo "<h1>Hotel Search</h1>";
 
             //ciclo l'array
-            foreach($hotels as $index => $hotel){
+            foreach($hotels as $key1 => $hotel){
                 //ciclo ogni elemento di ogni hotel
 
             echo    "<table class='table'>
                         <thead>
-                        <tr>
-                            <th scope='col'>". $hotel['name'] ."</th>
-                        </tr>
+                            <tr>
+                                <th scope='col'>". $key1 ."</th>
+                                <th scope='col'>". $hotel['description'] ."</th>
+                                <th scope='col'>". $hotel['parking'] ."</th>
+                                <th scope='col'>". $hotel['vote'] ."</th>
+                                <th scope='col'>". $hotel['distance_to_center'] ."</th>
+                            </tr>
                         </thead>
-                        <tbody class='table-group-divider'>";
+                        <tbody class='table-group-divider'>
+                            <tr>";
 
                             foreach($hotel as $key => $hotelInfo){
-                            echo    "<tr>
-                                        <td scope='row'>" .$hotelInfo."</td>
-                                    </tr>";
+                            echo    "<td scope='row'>" .$hotelInfo."</td>";
                             }
                         
-            echo        "</tbody>
+            echo            "</tr>
+                        </tbody>
                     </table>";
-                
-                        foreach($hotel as $key => $hotelInfo){
-                        
-                //         echo "<table > 
-                //                 <thead>
-                //                     <tr>
-                //                         <th>" . $key . "</th>
-                //                     </tr>
-                //             </table>";
-                }
-            }
-            
+                        }
 
+
+            
+            
+            
+            
+            //debug
             echo "<hr/>";
             echo "<div>debug</div>";
             var_dump($hotels);
