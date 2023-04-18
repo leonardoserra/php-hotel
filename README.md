@@ -1,7 +1,7 @@
 
-# php-hotel
+# php-hotel.
 
-nome repo: php-hotel
+nome repo: php-hotel.
 
 Descrizione
 
