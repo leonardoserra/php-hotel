@@ -1,6 +1,6 @@
 # php-hotel
-#nome repo: php-hotel
-#Descrizione
+nome repo: php-hotel
+Descrizione
 Partiamo da questo array di hotel. https://www.codepile.net/pile/OEWY7Q1G
 Stampare tutti i nostri hotel con tutti i dati disponibili.
 Iniziate in modo graduale.
