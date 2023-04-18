@@ -10,16 +10,23 @@
     <body>
         <header>
 
-            <h1 class="text-center">Hotel Search</h1>
-            <div class="d-flex justify-content-between">
-                <input type="number" class="form-control" name="vote" placeholder="Filtra per numero stelle" min="1" max="5"/>
-                <select class="form-select" name="parking">
-                    <option selected value="all">-tutti-</option>
-                    <option value="true">Con Parcheggio</option>
-                    <option value="false">Senza Parcheggio</option>
-                </select>
+        <h1 class="text-center">Hotel Search</h1>
+        <form >
+            <div class="d-flex justify-content-between flex-wrap">
+            <label for="vote" class="form-label">Cerca per Voto</label>
+            <input type="number" id="vote" class="form-control" name="vote" placeholder="Filtra per numero stelle" min="1" max="5"/>
+            <select class="form-select" name="parking">
+                <option selected value="all">-tutti-</option>
+                <option value="true">Con Parcheggio</option>
+                <option value="false">Senza Parcheggio</option>
+            </select>
             </div>
+            <button class="btn btn-primary" type="submit">Filtra</button>
+            <button class="btn btn-warning" type="reset">Reimposta</button>
+        </form>
         </header>
+
+        <!-- blocco php -->
         <?php
 
             $hotels = [
