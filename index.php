@@ -57,24 +57,27 @@
             //ciclo l'array
             foreach($hotels as $key1 => $hotel){
                 //ciclo ogni elemento di ogni hotel
+                //             <tr>";
+                //             foreach($hotel as $key => $hotelInfo){
+                //                 echo    "<th>" .$key."</th>";
+                //                 }
+                //             "</tr>
 
             echo    "<table class='table'>
                         <thead>
                             <tr>
-                                <th scope='col'>". $key1 ."</th>
-                                <th scope='col'>". $hotel['description'] ."</th>
-                                <th scope='col'>". $hotel['parking'] ."</th>
-                                <th scope='col'>". $hotel['vote'] ."</th>
-                                <th scope='col'>". $hotel['distance_to_center'] ."</th>
+                                <th scope='row'>Nome</th>
+                                <th scope='col'>Descrizione</th>
+                                <th scope='col'>Parcheggio</th>
+                                <th scope='col'>Voto</th>
+                                <th scope='col'>Distanza dal centro</th>
                             </tr>
                         </thead>
-                        <tbody class='table-group-divider'>
+                        <tbody >
                             <tr>";
-
                             foreach($hotel as $key => $hotelInfo){
-                            echo    "<td scope='row'>" .$hotelInfo."</td>";
+                            echo    "<td>" .$hotelInfo."</td>";
                             }
-                        
             echo            "</tr>
                         </tbody>
                     </table>";
