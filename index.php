@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Hotel Research</title>
     </head>
     <body>
         <?php
@@ -48,6 +48,24 @@
                 ],
 
             ];
+            echo "<pre>";
+
+            echo "<h1>Hotel Search</h1>";
+
+            
+
+            foreach($hotels as $index => $hotel){
+                foreach($hotel as $hotelInfo){
+                    echo $hotelInfo . "<br>";
+                }
+            }
+
+            echo "</pre>";
+
+            echo "<hr/>";
+            echo "<div>debug</div>";
+            var_dump($hotels);
+
 
         ?>
     </body>
