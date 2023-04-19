@@ -74,7 +74,7 @@
             ];
 
             //inizio codice
-            echo "<table class='table table-striped'>
+            echo    "<table class='table table-striped'>
                         <thead >
                             <tr >
                                 <th class='col-2'>Nome</th>
@@ -103,6 +103,11 @@
                     </table>";
                             
 
+
+
+
+
+            //codice sbagliato
             //ciclo l'array
                 //ciclo ogni elemento di ogni hotel
                 //             <tr>";
@@ -110,7 +115,7 @@
                 //                 echo    "<th>" .$key."</th>";
                 //                 }
                 //             "</tr>
-                echo"<table class='table table-striped'>
+                /*echo"<table class='table table-striped'>
                         <thead >
                             <tr >
                                 <th class='col-2'>Nome</th>
@@ -158,7 +163,7 @@
                 echo        "</tr>
                         </tbody>
                     </table>";
-            }
+            }*/
 
 
             
@@ -166,9 +171,9 @@
             
             
             //debug
-            echo "<hr/>";
-            echo "<div>debug</div>";
-            var_dump($hotels);
+            // echo "<hr/>";
+            // echo "<div>debug</div>";
+            // var_dump($hotels);
 
 
         ?>
